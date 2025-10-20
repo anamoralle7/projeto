@@ -2,21 +2,76 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "Gregory",
-      "email": "gregory@gmail.com",
-      "senha": "7"
-    },
-    {
-      "id": 7,
-      "nome": "Cristiano Ronaldo",
-      "email": "cr7@gmail.com",
-      "senha": "7"
+      "nome": "Ana",
+      "email": "anamerlo!@gmail.com",
+      "senha": "8",
+    "tipo": "administrador"
     },
     {
       "id": 2,
-      "nome": "Vegetta",
-      "email": "vegetta@gmail.com",
-      "senha": "kakaroto"
+      "nome": "xuxa",
+      "email": "xuxa@gmail.com",
+      "senha": "2",
+      "tipo": "gerente"
+    },
+    {
+      "id": 16,
+      "nome": "varonica",
+      "email": "veronica@gmail.com",
+      "senha": "kakaroto",
+      "tipo": "funcionario"
+    }
+  ],
+  "produtos":[
+    {
+      "id": 2,
+      "nome": "carta",
+      "preco": 234.90,
+      "categoria": "jogo",
+      "descricao": "algo",
+      "quantidade": 20,
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbquZQA8HZaYQm4J7fl30cfXi-iEShm56Vtg&s"
+    },
+     {
+      "id": 5,
+      "nome": "celular",
+      "preco": 235.80,
+      "categoria": "eletronico",
+      "descricao": "jogar",
+      "quantidade": 25,
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiZHOKXC0rANxzXbk1_rYOZL0Z5z4RnvmVh5HjsRGtMPlu6gE1bLMxXDBsLWZKR-KmWs&usqp=CAU"
+    },
+    {
+      "id": 10,
+      "nome": "unhas",
+      "preco": 500.90,
+      "categoria": "belaza",
+      "descricao": "ainda mais top",
+      "quantidade": 22,
+      "url": "https://i.pinimg.com/736x/a0/c3/c8/a0c3c83e18f4d0f4a6356f25042df143.jpg"
+    },
+    {
+      "id": 11,
+      "nome": "brincos",
+      "preco": 500.90,
+      "categoria": "acessorio",
+      "descricao": "um top ",
+      "quantidade": 21,
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfyXqRImd4OtHD3TCfLfLT-15Oj5ssJuO0HS_q16ADLFsIiukQ_YK8YgAiUgR9_6JHwvA&usqp=CAU"
+    },
+    {
+      "id": 12,
+      "nome": "oculos",
+      "preco": 500.90,
+      "categoria": "acessorio",
+      "descricao": "algo muito top",
+      "quantidade": 26,
+      "url": "https://http2.mlstatic.com/D_Q_NP_2X_858843-CBT82678201979_022025-T.webp"
     }
   ]
 }
+
+
+
+  
+
