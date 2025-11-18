@@ -16,8 +16,8 @@ formproduto: (req, res) => {
 
   // Função para levar os dados preenchidos para o model realizar o cadastro
   salvar: (req, res) => {
-    const { descrição,categoria, preço, quantidade, nome, imagem} = req.body;
-    produtoNovo = produtomodel.salvar({ descrição,categoria, preço, quantidade, nome, imagem });
+    const { descricao,categoria, preco, quantidade, nome, url} = req.body;
+    produtoNovo = produtomodel.salvar({ descricao,categoria, preco, quantidade, nome, url });
     res.render("produtos/confirmacaoproduto", {
       tipo: "cadastro",
       titulo: "Cadastro  de produtos confirmado",
@@ -43,36 +43,47 @@ formproduto: (req, res) => {
     const produto = produtomodel.buscarPorId(id);
     // Se não achar, avisa que deu erro
     if (!produto) {
-      return res.status(404).json({ mensagem: "produto não encontrado" });
+      return res.status(404).render("produtos/erroproduto",{
+        titulo: "erro",
+        mensagem: "produto nao encontrado"
+      })
     }
     // se achar, devolve as informações via json
-    res.json(produto);
+    res.render("produtos/editarproduto", {
+    titulo: "editar",
+    produto
+    })
   },
   // Função para atualizar informações de um usuário
   atualizarproduto: (req, res) => {
     // Busca o id vindo da url como parametro
     const id = req.params.id;
     // Busca as novas informações para atualizar
-    const { descrição,categoria, preço, quantidade, nome, imagem} = req.body;
+    const { descricao,categoria, preco, quantidade, nome, url} = req.body;
     //Guarda o usuário atualizado em uma variável
     const produtoAtualizado = produtomodel.atualizar(id, {
-     descrição,
+     descricao,
      categoria,
-    preço,
+    preco,
      quantidade,
      nome,
-     imagem
+     url
     });
 
     // Se não achar, avisa que deu erro
     if (!produtoAtualizado) {
-      return res.status(404).json({
-        produtoAtualizado: produtoAtualizado,
-        mensagem: "produto não encontrado",
-      });
+      return res.status(404).render("produtos/erroproduto",{
+        titulo: "erro",
+        mensagem: "não foi possivel atualizar"
+      })
     }
     // se atualizar, manda uma mensagem dizendo que deu certo
-    res.json({ mensagem: "produto foi atualizado" });
+    res.render("produtos/confirmacaoproduto", {
+    titulo: "edicao confirmada",
+    tipo: "edicao",
+    produtoAtualizado
+
+    })
   },
   // Função para deletar um usuário
   deletarProduto: (req, res) => {

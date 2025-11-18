@@ -4,8 +4,7 @@ const db = require("../data/db.json");
 // Variável pra armazenar os usuários vindos do db
 let listaUsuarios = db.usuarios;
 
-//ARÉA NOVA COM CONEXAÃO AO BANDO DE DADOS
-const conn = require("../config/conexao-banco");
+
 
 module.exports = {
   // LOGIN

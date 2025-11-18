@@ -9,7 +9,7 @@ module.exports = {
 
   //CRUD
   // Função para cadastrar um novo usuario
-  salvar: ({ nome, descricao, preco,quantidade,categoria }) => {
+  salvar: ({ nome, descricao, preco,quantidade,categoria, url}) => {
     const novoprodutos = {
       id: listaproduto.length + 1,
       nome,
@@ -17,7 +17,7 @@ module.exports = {
       preco,
       quantidade,
       categoria,
-
+      url
     };
     listaproduto.push(novoprodutos);
     console.log("Novo produto salvo:", novoprodutos);
@@ -40,12 +40,12 @@ module.exports = {
     // Se achar um usuário, substitui as informações que estavam nele, pelas novas enviadas
     listaproduto[index] = {
       ...listaproduto[index],
-      listaproduto: nome|| listaproduto[index].nome,
-      listaproduto: descricao|| listaproduto[index].descricao,
-      listaproduto: preco || listaproduto[index].preco,
-        listaproduto: quantidade||listaproduto[index].quantidade,
-           listaproduto: categoria|| listaproduto[index].categoria,
-           listaproduto: url|| listaproduto[index].url,
+     nome: nome|| listaproduto[index].nome,
+      descricao: descricao|| listaproduto[index].descricao,
+     preco: preco || listaproduto[index].preco,
+        quantidade: quantidade||listaproduto[index].quantidade,
+         categoria: categoria|| listaproduto[index].categoria,
+            url: url|| listaproduto[index].url,
     };
     // Retorna o usuário atualizado
     return listaproduto[index];

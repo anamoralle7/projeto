@@ -20,10 +20,10 @@ roteador.get("/", produtocontroller.listaproduto);
 roteador.get("/:id", produtocontroller.buscarproduto);
 
 // U = ATUALIZAR UM USUÁRIO
-roteador.put("/:id", produtocontroller.atualizarproduto);
+roteador.post("/:id", produtocontroller.atualizarproduto);
 
 //D = DELETAR UM USUÁRIO
-roteador.delete("/:id", produtocontroller.deletarProduto);
+roteador.get("/:id", produtocontroller.deletarProduto);
 
 // Criando a exportação desse arquivo
 module.exports = roteador;

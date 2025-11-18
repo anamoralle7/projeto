@@ -2,21 +2,21 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "Ana",
+      "usuario": "Ana",
       "email": "anamerlo!@gmail.com",
       "senha": "8",
     "tipo": "administrador"
     },
     {
       "id": 2,
-      "nome": "xuxa",
+      "usuario": "xuxa",
       "email": "xuxa@gmail.com",
       "senha": "2",
       "tipo": "gerente"
     },
     {
       "id": 16,
-      "nome": "varonica",
+      "usuario": "varonica",
       "email": "veronica@gmail.com",
       "senha": "kakaroto",
       "tipo": "funcionario"

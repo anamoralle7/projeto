@@ -21,7 +21,7 @@
         <thead class="table-dark">
             <tr class="text-center">
                 <th scope="col"> ID</th>
-                <th  scope="col"> Nome</th>
+                <th  scope="col"> usuario</th>
                 <th  scope="col">E-mail</th>
                 <th  scope="col">tipo</th>
                 <th  scope="col">ações</th>
@@ -33,11 +33,11 @@
             <% usuarios.forEach((usuario) => { %>
                 <tr>
                     <td><%= usuario.id %></td>
-                    <td><%= usuario.nome %></td>
+                    <td><%= usuario.usuario %></td>
                     <td><%= usuario.email %></td>
                     <td><%= usuario.tipo %></td>
                     <td>
-                     <a href="/usuarios/<%= usuario.id %>">
+                     <a href="/usuarios/<%= usuario.id %>" style="text-decoration:none;" >
                         <button class="btn btn-sm btn-warning me-2">
                             <i class="bi bi-pencil-square"></i>
                             editar
